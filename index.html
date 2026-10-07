@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Shop</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,27 +16,62 @@
     <main>
         <section class="product-list">
 
-            <article class="product-card" tabindex="0">
+            <article class="product-card">
                 <h2>Laptop</h2>
                 <p class="price">899 €</p>
-                <button>Details anzeigen</button>
+                <button class="details-btn">
+                    Details anzeigen
+                </button>
             </article>
 
-            <article class="product-card" tabindex="0">
+            <article class="product-card">
                 <h2>Smartphone</h2>
                 <p class="price">499 €</p>
-                <button>Details anzeigen</button>
+                <button class="details-btn">
+                    Details anzeigen
+                </button>
             </article>
 
-            <article class="product-card" tabindex="0">
+            <article class="product-card">
                 <h2>Monitor</h2>
                 <p class="price">199 €</p>
-                <button>Details anzeigen</button>
+                <button class="details-btn">
+                    Details anzeigen
+                </button>
             </article>
 
         </section>
     </main>
 
+    <!-- Modal -->
+    <div
+        id="modal"
+        class="modal hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title">
+
+        <section class="modal-content">
+
+            <h2 id="modal-title">Produktname</h2>
+
+            <p id="modal-price">Preis</p>
+
+            <p id="modal-description">
+                Produktbeschreibung
+            </p>
+
+            <button
+                id="close-modal"
+                aria-label="Produktdetails schließen">
+                Schließen
+            </button>
+
+        </section>
+
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>

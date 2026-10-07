@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Grundlayout */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -22,18 +23,17 @@ h1 {
     color: #222;
 }
 
-/* Produktliste */
+/* Produktliste (Mobile First) */
 .product-list {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* Produktkarten */
 .product-card {
     background-color: white;
-    width: 250px;
+    width: 100%;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -58,7 +58,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* Button */
+/* Buttons */
 button {
     background-color: #0078d4;
     color: white;
@@ -77,4 +77,45 @@ button:focus,
 .product-card:focus {
     outline: 3px solid orange;
     outline-offset: 3px;
+}
+
+/* Modal Overlay */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+/* Modal Inhalt */
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal verbergen */
+.hidden {
+    display: none;
+}
+
+/* Desktop / Tablet */
+@media (min-width: 768px) {
+    .product-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .product-card {
+        width: 250px;
+    }
 }
