@@ -1,0 +1,80 @@
+/* Allgemeine Einstellungen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 2rem;
+}
+
+/* Überschrift */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #222;
+}
+
+/* Produktliste */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Produktkarten */
+.product-card {
+    background-color: white;
+    width: 250px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Produkttitel */
+.product-card h2 {
+    margin-bottom: 1rem;
+}
+
+/* Preis */
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0078d4;
+    margin-bottom: 1rem;
+}
+
+/* Button */
+button {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005ea6;
+}
+
+/* A11y: Sichtbarer Fokus */
+button:focus,
+.product-card:focus {
+    outline: 3px solid orange;
+    outline-offset: 3px;
+}
